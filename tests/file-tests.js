@@ -76,7 +76,7 @@ if (Meteor.isServer) {
 	function openTempFile(name, callback) {
 	  return temp.open(name, callback);
 	}
-	var openTempFileSync = Meteor._wrapAsync(openTempFile);
+	var openTempFileSync = Meteor.wrapAsync(openTempFile);
 
 	var info = openTempFileSync({suffix: '.txt'});
 	var tempFilePath = info.path;

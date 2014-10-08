@@ -220,4 +220,4 @@ function _copyStoreData(fileObj, storeName, sourceKey, callback) {
 
   readStream.pipe(writeStream);
 }
-var copyStoreData = Meteor._wrapAsync(_copyStoreData);
+var copyStoreData = Meteor.wrapAsync(_copyStoreData);
